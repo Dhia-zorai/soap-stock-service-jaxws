@@ -1,0 +1,1 @@
+# soap-stock-service-jaxws
