@@ -11,5 +11,5 @@ import jakarta.jws.WebService;
 public interface StockService {
 
     @WebMethod
-    Produit chercherProduit(@WebParam(name = "id") Long id);
+    Produit chercherProduit(@WebParam(name = "id") Long id) throws ProduitInexistantException;
 }

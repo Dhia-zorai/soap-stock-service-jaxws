@@ -10,10 +10,10 @@ import jakarta.jws.WebService;
 public class StockServiceImpl implements StockService {
 
     @Override
-    public Produit chercherProduit(Long id) {
-        if (id == 10) {
+    public Produit chercherProduit(Long id) throws ProduitInexistantException {
+        if (id != null && id == 10) {
             return new Produit(10L, "Unité Centrale i7", 750.00);
         }
-        return null;
+        throw new ProduitInexistantException("Produit introuvable : " + id, "NOT_FOUND_ERR");
     }
 }
